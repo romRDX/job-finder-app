@@ -25,8 +25,6 @@ const useJobsAPI = (): Jobs[] => {
       .then((jobsData) => setJobsData(jobsData.jobs.slice(0, 10)));
   }, []);
 
-  // console.log('JOBS DATA: ', jobsData[0].postingDate);
-
   return jobsData;
 };
 

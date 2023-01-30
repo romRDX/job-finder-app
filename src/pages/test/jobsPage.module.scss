@@ -44,7 +44,6 @@
         min-width: 44px;
         background: #ff6000;
         color: #fff;
-        cursor: pointer;
     }
 
     &__container {
@@ -104,6 +103,9 @@
             align-items: center;
             flex-wrap: wrap;
             height: 115px;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
         &__container {

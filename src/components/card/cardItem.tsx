@@ -8,7 +8,7 @@ interface CardItemProps {
 
 const CardItem = ({ data }:CardItemProps ) => {
 
-    // I know you didnt ask to also show the posted date, but this will make it easier for you to check if its working
+    // I know you didnt ask to also show the posted date, but this will make it easier for you to check if the filter is working
     const postedDate = () => {
         const daysAgo = differenceInDays(new Date(data.postingDate), new Date())*-1;
         
