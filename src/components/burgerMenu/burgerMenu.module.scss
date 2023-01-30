@@ -1,0 +1,148 @@
+.burgerMenu {
+
+  &__container {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    align-items: center;
+
+    a {
+      color: #aaa;
+      cursor: pointer;
+      display: block;
+      font-family: sans-serif;
+      letter-spacing: 1px;
+      line-height: 22px;
+      margin-top: 20px;
+      min-width: max-content;
+      overflow: hidden;
+      padding: 0 24px 20px 0;
+      position: relative;
+      text-transform: uppercase;
+      transition: all .25s ease-in-out;
+      font-size: 14px;
+    }
+
+    button {
+      display: inline-block;
+      min-height: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      background: #3174ee;
+      color: #fff;
+      width: 105px;
+      height: 36px;
+      border-radius: 4px;
+      outline: 0!important;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28px;
+    cursor: pointer;
+    
+    span {
+      height: 8px;
+      width: 40px;
+      background: #FFF;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 1180px){
+        
+    &__container {
+
+      left: -100%;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 115px;
+      width: 100%;
+      height: calc(100% - 115px);
+      background: gray;
+      padding: 20px;
+      transition: .5s;
+      align-items: flex-start;
+
+      a {
+        font-size: 34px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        display: block;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        line-height: 22px;
+        min-width: max-content;
+        position: relative;
+        text-transform: uppercase;
+        transition: all .25s ease-in-out;
+      }
+
+      &--open {
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 115px;
+        width: 100%;
+        height: calc(100% - 115px);
+        background: gray;
+        padding: 20px;
+        transition: .5s;
+        align-items: flex-start;
+
+        a {
+          font-size: 34px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          display: block;
+          font-family: sans-serif;
+          letter-spacing: 1px;
+          line-height: 22px;
+          min-width: max-content;
+          position: relative;
+          text-transform: uppercase;
+          transition: all .25s ease-in-out;
+        }
+
+        button {
+          display: inline-block;
+          min-height: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+          background: #3174ee;
+          color: #fff;
+          width: 105px;
+          height: 36px;
+          border-radius: 4px;
+          outline: 0!important;
+          border: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__burger {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 750px){
+      &__burger {
+        display: flex;
+        order: 2;
+        margin-left: auto;
+      }
+    }
+}

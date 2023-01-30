@@ -1,0 +1,125 @@
+.jobs {
+    
+    &__header {
+        width: 100%;
+        background: #2c2c2c;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__searchInputs {
+        margin: 0 48px;
+        display:  flex;
+
+        input {
+            background-clip: padding-box;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            color: #495057;
+            display: block;
+            font-size: 1rem;
+            height: calc(2.25rem + 2px);
+            line-height: 1.5;
+            padding: 0.375rem 0.75rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            width: 100%;
+
+            &:first-of-type {
+                width: 320px;
+                height: 44px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+    &__search {
+        border: none;
+        border-radius: 0 3px 3px 0;
+        height: 44px;
+        max-width: 44px;
+        min-width: 44px;
+        background: #ff6000;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__container {
+        max-width: 1140px;
+        margin: 36px auto;
+    
+        h1 {
+            font-weight: 500;
+            font-size: 32px;
+            color: #333;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__jobsList {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        place-items: center;
+    }
+
+    &__listOptions {
+        display: flex;
+        width: fit-content;
+        margin-bottom: 40px;
+    }
+
+    &__filter {
+        padding: 5px 8px;
+        border-radius: 4px;
+        color: #333;
+        border: 1px solid gray;
+        width: fit-content;
+        transition: .5s;
+
+        &--active {
+            transition: .5s;
+            padding: 5px 8px;
+            border-radius: 4px;
+            color: #FFF;
+            border: 1px solid #FF6000;
+            background: #FF6000;
+        }
+    }
+
+    @media (max-width: 1180px){
+
+        &__header {
+            width: 100%;
+            padding: 0 20px;
+            background: #2c2c2c;
+            height: 68px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 115px;
+        }
+
+        &__container {
+            padding: 0 20px;
+        }
+
+        &__jobsList {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 750px){
+        &__searchInputs {
+            margin: 0 48px;
+            display:  flex;
+            order: 3;
+        }
+    }
+}
